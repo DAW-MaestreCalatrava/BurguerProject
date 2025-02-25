@@ -10,23 +10,18 @@ class BurguerCard extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
-        this.background = this.getAttribute("background") || "#fff"; // Default background
-    }
+        this.background = this.getAttribute("background") || false; // Default background
 
-    attributeChangedCallback() {
         this.render();
     }
 
-    connectedCallback() {
-        this.render();
-    }
 
     render() {
         this.shadowRoot.adoptedStyleSheets.push(styles);
         this.shadowRoot.innerHTML = /* HTML */`
         <style>
             card-component {
-                background-color: ${this.background};
+                background-color: ${this.background ? 'rgba(0, 0, 0, 0.5)' : 'transparent'};
             }
         </style>
         ${this.getAttribute("foto") ? `<img src="${this.getAttribute("foto")}" alt="Imagen">` : ""}
@@ -38,6 +33,13 @@ class BurguerCard extends HTMLElement {
       `;
     }
 
+    attributeChangedCallback() {
+        this.render();
+    }
+
+    connectedCallback() {
+        this.render();
+    }
 
 }
 
