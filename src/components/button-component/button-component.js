@@ -133,7 +133,6 @@ class buttonComponent extends HTMLElement {
 
             formulario.submit();
 
-
             if (formulario) {
                 // Submit the form if it exists
                 formulario.submit();
