@@ -22,6 +22,7 @@ class buttonComponent extends HTMLElement {
         this.buttonState = this.getAttribute("data-state") || "normal";
         this.buttonAction = this.getAttribute("data-action") || "";
         this.buttonObject = this.getAttribute("data-object") || "";
+        const textColor = this.buttonState === "active" ? "#080808" : "#ffffff";
         this.render();
     }
 
@@ -41,10 +42,9 @@ class buttonComponent extends HTMLElement {
             </style>
 
             <button data-style="${this.buttonStyle}" data-state="${this.buttonState}">
-                <span>
-                    <slot>
-                    </slot>
-                </span>
+                    <text-component size="body" color="textColor">
+                    ${this.innerHTML}
+                    </text-component>
             </button>
             `;
         const button = this.shadowRoot.querySelector("button");

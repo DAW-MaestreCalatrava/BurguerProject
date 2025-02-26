@@ -6,7 +6,6 @@ button {
 
 
 button[data-style="link"] {
-    padding: 0.8rem;
     background-color: transparent;
     color: #080808;
 }
@@ -18,8 +17,7 @@ button[data-style="link"]:hover {
 }
 button[data-style="link"][data-state="active"] {
     background-color: #080808;
-    color: #fff;
-    
+    color: #ffffff;
     border-top-left-radius: 16px;
     border-bottom-right-radius: 16px;
 }
@@ -29,11 +27,9 @@ button[data-style="primary"] {
     background-color: #e89a2f;
     color: #080808;
     border-radius: 5px;
-    padding: 0.5rem;
 }
 button[data-style="primary"]:hover {
     background-color: #ffffff;
     color: #080808;
     border-radius: 5px;
-    padding: 0.5rem;
 }
