@@ -8,7 +8,7 @@ import "./src/footerComponents/truck-icon.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    const header = document.querySelector("header-component");
+    const header = document.querySelector("nav-component");
 
     //Creamos una url
     const url=new URL(location.href)
