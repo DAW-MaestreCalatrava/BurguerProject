@@ -1,7 +1,9 @@
 import "./src/index.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-
+  // Selecciona un contenedor donde agregar tus componentes
+  // Puedes tener un contenedor específico en tu index.html, por ejemplo:
+  // <div id="app"></div>
     const header = document.querySelector("nav-component");
 
     //Creamos una url
