@@ -1,0 +1,35 @@
+button {
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+}
+
+
+button[data-style="link"] {
+    background-color: transparent;
+    color: #080808;
+}
+
+button[data-style="link"]:hover {
+    background-color: #f0f0f0;
+    color: #080808;
+    border-radius: 2px;
+}
+button[data-style="link"][data-state="active"] {
+    background-color: #080808;
+    color: #ffffff;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+
+button[data-style="primary"] {
+    background-color: #e89a2f;
+    color: #080808;
+    border-radius: 5px;
+}
+button[data-style="primary"]:hover {
+    background-color: #ffffff;
+    color: #080808;
+    border-radius: 5px;
+}
