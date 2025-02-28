@@ -41,11 +41,12 @@ class ContactForm extends HTMLElement {
           button:hover {
             background-color: #d0842f;
           }
+
         </style>
         <h2>Get In Touch</h2>
         <p><strong>Please give us your feedback!</strong><br>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <form>
+        <form class="formulario">
           <input type="text" placeholder="Name" required>
           <input type="email" placeholder="Email" required>
           <textarea placeholder="Message" rows="4" required></textarea>
@@ -57,13 +58,13 @@ class ContactForm extends HTMLElement {
   connectedCallback() {
     this.shadowRoot
       .querySelector("form")
-      .addEventListener("submit", this.handleSubmit);
+      .addEventListener("submit", this.handleSubmit.bind(this));
   }
 
   disconnectedCallback() {
     this.shadowRoot
       .querySelector("form")
-      .removeEventListener("submit", this.handleSubmit);
+      .removeEventListener("submit", this.handleSubmit.bind(this));
   }
 
   handleSubmit(event) {
@@ -72,7 +73,6 @@ class ContactForm extends HTMLElement {
     const email = this.shadowRoot.querySelector('input[type="email"]').value;
     const message = this.shadowRoot.querySelector("textarea").value;
     console.log("Form submitted:", { name, email, message });
-   
   }
 }
 
