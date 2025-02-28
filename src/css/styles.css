@@ -1,5 +1,29 @@
+*{
+    box-sizing: border-box;
+}
 .cabecera {
     width: 100%;
     display: flex;
     justify-content: space-around;
+}
+
+.oferta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.oferta__title {
+    width: 100%;
+}
+
+.oferta__subtitle {
+    width: 100%;
+}
+
+.platos {
+    /* flex-direction: row; */
+    /* align-items: center; */
+    width: 33%;
+
 }
