@@ -72,7 +72,6 @@ class ContactForm extends HTMLElement {
     const email = this.shadowRoot.querySelector('input[type="email"]').value;
     const message = this.shadowRoot.querySelector("textarea").value;
     console.log("Form submitted:", { name, email, message });
-   
   }
 }
 
