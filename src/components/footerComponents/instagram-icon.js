@@ -14,9 +14,8 @@ class InstagramIcon extends HTMLElement {
           @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
           
           i {
-            font-size: 24px;
-            color: black;
-            padding-right: 7px;
+            font-size: 17px;
+            color: #fff;
             cursor: pointer;
           }
 

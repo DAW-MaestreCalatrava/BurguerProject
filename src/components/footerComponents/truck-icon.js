@@ -14,8 +14,8 @@ class TruckIcon extends HTMLElement {
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
         
         i {
-          font-size: 20px;
-          color: black;
+          font-size: 14px;
+          color: #fff;
           cursor: pointer;
         }
 
@@ -28,4 +28,4 @@ class TruckIcon extends HTMLElement {
   }
 }
 
-customElements.define('truck-icon', TruckIcon);
+customElements.define('truck-icon', TruckIcon);   

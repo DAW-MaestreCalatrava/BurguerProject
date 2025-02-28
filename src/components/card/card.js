@@ -25,7 +25,7 @@ class BurguerCard extends HTMLElement {
         this.shadowRoot.innerHTML = /* HTML */`
         <style>
             :host {
-                background-color: ${backgroundColor};
+                background-color: ${this.hero ? 'rgba(44, 44, 44, 0.5)' : 'transparent'};
             }
         </style>
         
