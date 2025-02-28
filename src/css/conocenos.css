@@ -1,0 +1,14 @@
+main{
+    margin-bottom: 50px;
+}
+.cartas{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    justify-content: center;
+    align-items: start;
+}
+.elemento{
+    width: 33%;
+}
+

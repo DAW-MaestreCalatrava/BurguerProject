@@ -15,3 +15,6 @@ img {
   border: 2px solid orange;
 }
 
+main > text-component{
+  width: 100%;
+}

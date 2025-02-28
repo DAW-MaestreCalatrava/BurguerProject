@@ -7,3 +7,4 @@ import "./components/text/text.js";
 import "./components/footerComponents/instagram-icon.js";
 import "./components/footerComponents/globe-icon.js";
 import "./components/footerComponents/truck-icon.js";
+import "./components/footer/footer-component.js";
