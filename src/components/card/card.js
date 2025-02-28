@@ -4,13 +4,13 @@ class BurguerCard extends HTMLElement {
 
     // Define los atributos que se van a observar
     static get observedAttributes() {
-        return ["title", "subtitle", "body", "foto", "iconos", "background"];
+        return ["title", "subtitle", "body", "foto", "iconos", "hero"];
     }
 
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
-        this.background = this.getAttribute("background") || false; // Default background
+        this.hero = this.getAttribute("hero") || false;
 
         this.render();
     }
@@ -20,8 +20,8 @@ class BurguerCard extends HTMLElement {
         this.shadowRoot.adoptedStyleSheets.push(styles);
         this.shadowRoot.innerHTML = /* HTML */`
         <style>
-            card-component {
-                background-color: ${this.background ? 'rgba(0, 0, 0, 0.5)' : 'transparent'};
+            :host {
+                background-color: ${this.hero ? 'rgba(44, 44, 44, 0.5)' : 'transparent'};
             }
         </style>
         ${this.getAttribute("foto") ? `<img src="${this.getAttribute("foto")}" alt="Imagen">` : ""}
@@ -30,6 +30,8 @@ class BurguerCard extends HTMLElement {
         ${this.getAttribute("title") ? `<text-component size="title" color="rgba(0, 0, 0, 0.5)" alignCenter="true">${this.getAttribute('title')}</text-component>` : ""}
         ${this.getAttribute("subtitle") ? `<text-component size="subtitle" color="#000" alignCenter="true">${this.getAttribute('subtitle')}</text-component>` : ""}
         ${this.getAttribute("body") ? `<text-component size="body" color="#222" alignCenter="true">${this.getAttribute('body')}</text-component>` : ""}
+        ${this.hero ? `<button-component data-style="primary" data-state="normal" data-action="redirect" data-object="https://google.com">Ver más</button-component>` : ""}
+        
       `;
     }
 
