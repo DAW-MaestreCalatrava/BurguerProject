@@ -2,29 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="./src/css/reset.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./src/css/reset.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
 
-    <script type="module" src="./main.js"></script>
+  <script type="module" src="./main.js"></script>
 
-    <title>Burguer Project</title>
-<link rel="stylesheet" href="./src/css/styles.css">
+  <title>Burguer Project</title>
+  <link rel="stylesheet" href="./src/css/styles.css">
 
 </head>
 
 <body>
-    <header class="cabecera">
-        <header-component src="https://pepesfood.es/wp-content/uploads/E-1-1.png"></header-component>
-        <nav-component></nav-component>
-    </header>
-    <burguer-component></burguer-component>
-
-    <!-- <footer-component></footer-component> -->
+  <header class="cabecera">
+    <header-component src="https://pepesfood.es/wp-content/uploads/E-1-1.png"></header-component>
+    <nav-component></nav-component>
+  </header>
+  <main><hero-section></hero-section></main>
+  <section class="oferta">
+    <text-component class="oferta__title" size="title" color="#e89a2f" alignCenter="true">
+      ¿QUE OFRECEMOS?
+    </text-component>
+    <text-component class="oferta__subtitle" size="body" alignCenter="true">
+      Somos especialistas en hamburguesas de tipo Smash. Además tenemos postres caseros para que disfrutes de una comida
+      o cena redonda
+    </text-component>
+    <card-component class="platos" subtitle="Hamburguesas"
+      body="Nuestra especialidad son las burguer smash. Ven a probar la Chess Lover o la Delirios del Quijote, hamburguesas que han quedado muy bien en concursos nacionales.">
+    </card-component>
+    <card-component class="platos" subtitle="Entrantes"
+      body="Nuestros nachos o patatas con salsa ranchera son otra de nuestras especialidades. ¡Átrevete a probarlos!">
+    </card-component>
+    <card-component class="platos" subtitle="Postres caseros
+      body="Nuestros postres caseros darán ese toque dulce al final de tu pedido.">
+    </card-component>
+  </section>
+  
+  <footer>
+    <footer-component></footer-component>
+  </footer>
 </body>
 
 </html>
