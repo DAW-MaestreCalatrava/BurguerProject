@@ -14,9 +14,8 @@ class GlobeIcon extends HTMLElement {
           @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
           
           i {
-            font-size: 21px;
-            color: black;
-            padding-right: 7px;
+            font-size: 15px;
+            color: #fff;
             cursor: pointer;
           }
           
@@ -30,3 +29,4 @@ class GlobeIcon extends HTMLElement {
   }
   
   customElements.define('globe-icon', GlobeIcon);
+
