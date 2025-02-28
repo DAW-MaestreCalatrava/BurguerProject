@@ -17,6 +17,10 @@ class BurguerCard extends HTMLElement {
 
 
     render() {
+        // Verificar si el valor de hero es true o false
+        const backgroundColor = this.hero ? 'rgba(0, 0, 0, 0.5)' : 'transparent';
+        const textColor = this.hero ? 'white' : 'black';
+
         this.shadowRoot.adoptedStyleSheets.push(styles);
         this.shadowRoot.innerHTML = /* HTML */`
         <style>
@@ -24,18 +28,22 @@ class BurguerCard extends HTMLElement {
                 background-color: ${this.hero ? 'rgba(44, 44, 44, 0.5)' : 'transparent'};
             }
         </style>
+        
         ${this.getAttribute("foto") ? `<img src="${this.getAttribute("foto")}" alt="Imagen">` : ""}
         ${this.getAttribute("iconos") ? `<div class="iconos">${this.getAttribute("iconos")}</div>` : ""}
 
-        ${this.getAttribute("title") ? `<text-component size="title" color="rgba(0, 0, 0, 0.5)" alignCenter="true">${this.getAttribute('title')}</text-component>` : ""}
-        ${this.getAttribute("subtitle") ? `<text-component size="subtitle" color="#000" alignCenter="true">${this.getAttribute('subtitle')}</text-component>` : ""}
-        ${this.getAttribute("body") ? `<text-component size="body" color="#222" alignCenter="true">${this.getAttribute('body')}</text-component>` : ""}
-        ${this.hero ? `<button-component data-style="primary" data-state="normal" data-action="redirect" data-object="https://google.com">Ver más</button-component>` : ""}
-        
+        ${this.getAttribute("title") ? `<text-component size="title" color="${textColor}" alignCenter="true">${this.getAttribute('title')}</text-component>` : ""}
+        ${this.getAttribute("subtitle") ? `<text-component size="subtitle" color="${textColor}" alignCenter="true">${this.getAttribute('subtitle')}</text-component>` : ""}
+        ${this.getAttribute("body") ? `<text-component size="body" color="${textColor}" alignCenter="true">${this.getAttribute('body')}</text-component>` : ""}
+        ${this.hero ? `<button-component data-style="primary" data-state="normal" data-action="redirect" data-object="#">Ver Menú</button-component>` : ""}
       `;
     }
 
-    attributeChangedCallback() {
+    // Callback cuando se cambian los atributos
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (name === 'hero') {
+            this.hero = newValue === 'true'; // Aseguramos que sea un booleano
+        }
         this.render();
     }
 
