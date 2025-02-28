@@ -1,4 +1,5 @@
 class BurguerComponent extends HTMLElement {
+
     static get observedAttributes() {
         return ["prop1"];
     }
