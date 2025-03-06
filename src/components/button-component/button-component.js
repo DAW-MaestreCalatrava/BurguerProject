@@ -111,7 +111,7 @@ class buttonComponent extends HTMLElement {
      */
     redirect(url) {
         if (url) {
-            window.location.href = url;
+            window.location.pathname = url;
         } else {
             console.error("Debes de introducir una URL para redirigir");
         }
